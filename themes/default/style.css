@@ -1,0 +1,14 @@
+.form-floating>input {
+    border-radius: 0;
+    position: relative;
+    margin-bottom: -1px;
+}
+.form-floating:first-child > input{
+    border-radius: 5px 5px 0 0;
+}
+.form-floating:last-child > input{
+    border-radius: 0 0 5px 5px;
+}
+.form-floating > label, input:focus {
+    z-index: 1;
+}
