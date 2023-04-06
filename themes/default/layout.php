@@ -40,10 +40,7 @@ use models\Users;
 
             <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                 <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-                <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+                <li><a href="/users" class="nav-link px-2 link-dark">Users</a></li>
             </ul>
 
             <div class="col-md-3 text-end">
@@ -53,7 +50,7 @@ use models\Users;
                 <?php else : ?>
                     <div class="dropdown">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <?= Users::getLoginedUser()["login"] ?>
+                            <?= Users::getLoginedUser()["name"] ?>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Profile</a></li>

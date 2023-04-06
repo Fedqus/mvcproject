@@ -14,4 +14,7 @@ class Utils {
     public static function redirect($href){
         header("Location: $href");
     }
+    public static function Encrypt($data) {
+        return md5($data);
+    }
 }

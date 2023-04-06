@@ -8,8 +8,8 @@
         <?php endif; ?>
         <div class="mb-3">
             <div class="form-floating">
-                <input type="text" name="login" class="form-control" id="floatingInput" placeholder="Login" value=<?= $login ?? null ?>>
-                <label for="floatingInput">Login</label>
+                <input type="text" name="email" class="form-control" id="floatingInput" placeholder="Email" value=<?= $email ?? null ?>>
+                <label for="floatingInput">Email</label>
             </div>
             <div class="form-floating">
                 <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">

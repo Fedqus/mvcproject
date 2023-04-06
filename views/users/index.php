@@ -3,18 +3,30 @@
         <thead>
             <tr>
                 <th scope="col">#</th>
-                <th scope="col">Username</th>
-                <th scope="col">Password</th>
-                <th scope="col">Age</th>
+                <th scope="col">Name</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Email</th>
+                <th scope="col">Birth Date</th>
+                <th scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
-        <?php foreach ($users as $user) : ?>
+            <?php foreach ($users as $key => $user) : ?>
                 <tr>
-                    <th scope="row"><?= $user["id"] ?></th>
-                    <td><?= $user["login"] ?></td>
-                    <td><?= $user["password"] ?></td>
-                    <td><?= $user["age"] ?></td>
+                    <th scope="row"><?= $key + 1 ?></th>
+                    <td><?= $user["name"] ?></td>
+                    <td><?= $user["lastname"] ?></td>
+                    <td><?= $user["email"] ?></td>
+                    <td><?= $user["birth_date"] ?></td>
+                    <td>
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/users/edit/<?=$user["email"]?>">Edit</a></li>
+                                <li><a class="dropdown-item" href="/users/delete/<?=$user["email"]?>">Delete</a></li>
+                            </ul>
+                        </div>
+                    </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
